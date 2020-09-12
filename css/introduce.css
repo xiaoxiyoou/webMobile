@@ -1,0 +1,29 @@
+.intro-wrap{
+    padding: .47rem;
+}
+.intro-text{
+    color: #444444;
+    font-size: .25rem;
+    line-height: .48rem;
+    text-indent: .46rem;
+}
+.intro-img{
+    width: 100%;
+    margin:.36rem auto;
+}
+.intro-text_2{
+    color: #444444;
+    font-size: .25rem;
+    line-height: .48rem;
+    width: 100%;
+}
+.intro-text>span{
+    font-size: .3rem;
+}
+.intro-text_3{
+    color: #444444;
+    font-size: .28rem;
+    width: 100%;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+}

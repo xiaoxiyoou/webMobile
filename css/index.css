@@ -1,0 +1,157 @@
+.swiper-container {
+    width: 100%;
+}
+
+.swiper-img {
+    width: 100%;
+    height: 7.17rem;
+}
+
+.title-wrap {
+    margin: .5rem auto .36rem;
+}
+
+.title-item>.fly {
+    width: .39rem;
+    height: .31rem;
+}
+
+.title-text {
+    color: #303d4c;
+    font-size: .28rem;
+    font-weight: 700;
+}
+
+.eg-title {
+    color: #999999;
+    font-size: .16rem;
+    margin-top: .1rem;
+}
+
+.brand-wrap {
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.brand-item {
+    width: 4.56rem;
+    position: relative;
+    background: #f2f2f2;
+    margin-right: .15rem;
+}
+
+.brand-img {
+    width: 4.56rem;
+    height: 2.63rem;
+}
+
+.brand-logo {
+    position: absolute;
+    top: 2.19rem;
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    border: 1px solid #bea16c;
+}
+
+.brand-title {
+    width: 100%;
+    padding-left: .22rem;
+    color: #212121;
+    font-size: .28rem;
+    margin-top: .47rem;
+    font-weight: 700;
+}
+
+.brand-des {
+    width: 100%;
+    color: #666666;
+    font-size: .23rem;
+    padding: .15rem .22rem;
+    white-space: normal;
+}
+
+.brand-btn {
+    width: 1.48rem;
+    height: .35rem;
+    border-radius: .16rem;
+    background-color: #bea16c;
+    color: #ffffff;
+    font-size: .2rem;
+    margin-bottom: .3rem;
+}
+
+.social-wrap {
+    position: relative;
+    height: 7.95rem;
+
+}
+
+.social-bg {
+    position: absolute;
+    width: 100%;
+    height: 7.95rem;
+}
+
+.social-cont {
+    position: relative;
+    z-index: 1;
+}
+
+.social-item {
+    color: #ffffff;
+    margin-top: .7rem;
+    width: 33%;
+}
+
+.social-img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.socail-text {
+    font-size: .24rem;
+    margin-top: .19rem;
+}
+
+.news-img {
+    width: 100%;
+}
+
+.news-item {
+    margin:0 .3rem;
+    padding: .3rem 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.news-title {
+    font-size: .32rem;
+    color: #333333;
+    font-weight: 700;
+}
+
+.news-des {
+    font-size: .23rem;
+    color: #a8a8a8;
+    margin-top: .15rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+}
+.news-more{
+    width: 1.74rem;
+    height: .49rem;
+    background-color: #bea16c;
+    border-radius: .25rem;
+    color: #ffffff;
+    margin: 0 auto;
+    display: block;
+    line-height: .49rem;
+    text-align: center;
+    margin-top: .35rem;
+    margin-bottom: 2.03rem;
+
+}

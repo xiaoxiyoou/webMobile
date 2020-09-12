@@ -1,0 +1,27 @@
+.btm-wrap{
+    background-color: #bea16c;
+    color: #ffffff;
+    width: 100%;
+    position: relative;
+}
+
+.btm-list{
+    padding-top: .32rem;
+}
+.btm-text{
+    border-right: 1px solid #ffffff;
+    font-size: .23rem;
+    color: #ffffff;
+    line-height: .23rem;
+    width: 1.2rem;
+    text-align: center;
+}
+.btm-tip{
+    font-size: .25rem;
+    margin-top:1.62rem ;
+}
+.btm-record {
+    font-size: .16rem;
+    margin-top: .1rem;
+    margin-bottom: .2rem;
+}

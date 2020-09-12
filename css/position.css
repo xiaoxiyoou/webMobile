@@ -1,0 +1,31 @@
+.position-wrap{
+    /* width: 6.7rem; */
+}
+.position-list{
+    width: 3.35rem;
+}
+.position-list>.EnglishName{
+    color: #888886;
+    font-size: .20rem;
+    /* margin-top: 1.03rem; */
+}
+.position-list>.title{
+    width: 2.82rem;
+    height: .5rem;
+    border: .02rem solid #888886;
+    color: #2c3d4e;
+    font-size: .20rem;
+    /* margin-top: .15rem; */
+}
+.position-list>.des{
+    /* width: 200rem; */
+    width:3rem;
+    /* min-height: 1.7rem; */
+    font-size: .2rem;
+    line-height: .32rem;
+    /* margin-top: .75rem; */
+}
+.position-img{
+    width: 3.35rem;
+    height: 3.35rem;
+}

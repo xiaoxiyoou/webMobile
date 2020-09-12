@@ -1,0 +1,67 @@
+.his-wrap {
+    padding: .7rem .3rem;
+}
+
+.history-wrap {
+    width: 6.5rem;
+    margin-top: .81rem;
+}
+
+.des-wrap {
+    position: relative;
+    margin-top: .26rem;
+}
+
+.des {
+    padding: .20rem;
+    background-color: #efefef;
+    border-radius: .05rem;
+    width: 2.89rem;
+    line-height: .32rem;
+    color: #666666;
+    font-size: .18rem;
+}
+
+.triangle {
+    position: absolute;
+    right: .35rem;
+    height: .14rem;
+    top: -.13rem;
+}
+
+.triangleRight {
+    position: absolute;
+    left: .35rem;
+    height: .14rem;
+    top: -.13rem;
+}
+
+.year {
+    color: #c4a064;
+    font-size: .28rem;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.history-img {
+    height: 31rem;
+    width: .21rem;
+}
+
+.spot {
+    width: .08rem;
+    height: .08rem;
+    border-radius: 50%;
+    background-color: #c4a064;
+}
+li{color:#c4a064}  /*点的颜色*/
+li span{color:#666666} 
+.itemBlock{
+    width: 2.89rem;
+}
