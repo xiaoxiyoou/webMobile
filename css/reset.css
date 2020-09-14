@@ -227,3 +227,10 @@ input:-ms-input-placeholder {
   font-size: .25rem;
   display: none;
 }
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #bea16c!important;
+}
+[v-cloak] {
+  display: none;
+}

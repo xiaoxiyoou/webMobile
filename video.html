@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="css/title.css" />
     <link rel="stylesheet" href="css/btm.css" />
     <link rel="stylesheet" href="css/com.css" />
-    <title>首页</title>
+    <link rel="stylesheet" href="css/video.css" />
+    <title>视频专区</title>
 </head>
 
 <body>
-    <div class="contain">
+    <div class="contain " id="app" v-cloak>
         <!-- 占位 -->
         <div class="nav-pos"></div>
         <!-- 导航栏 -->
@@ -118,7 +119,28 @@
                 </div>
             </div>
         </div>
-
+        <!-- 内容 -->
+        <div class="group-nav row a-c">
+            <div class="nav-group-item"  :class="{'textHover':isActive == index}" 
+            v-for="(item,index) in navList" :key="index" @click="getlist(item.limit, item.cate,index)">{{item.name}}</div>
+        </div>
+        <div class="group-wrap col a-c">
+            <div class="swiper-list row  f-w j-b">
+                <a :href="'./newsDetail.html?id='+ item.id" v-for="(item,index) in dataList" :key="index">
+                    <div class="swiper-item col ">
+                        <div class="img-wrap">
+                            <img class="swiperimg4" :src="item.imgurl" alt="">
+                        </div>
+                        <div class="swiper-btm col j-b">
+                            <div class="name slideInUp wow">{{item.title}}</div>
+                            <div class="desCon row j-b slideInUp wow">
+                                <div class="des">{{item.updatetime}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
 
 
         <!-- 底部 -->
@@ -151,6 +173,9 @@
         </div>
     </div>
 </body>
+<script src="js/vue.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/video.js"></script>
 <script src="js/jquery-1.8.2.js"></script>
 <script src="js/noScaling.js"></script>
 <script src="js/layer.js"></script>

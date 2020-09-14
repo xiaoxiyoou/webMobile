@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="css/title.css" />
     <link rel="stylesheet" href="css/btm.css" />
     <link rel="stylesheet" href="css/com.css" />
-    <title>首页</title>
+    <link rel="stylesheet" href="css/team.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <title>团队介绍</title>
 </head>
 
 <body>
@@ -118,9 +121,48 @@
                 </div>
             </div>
         </div>
+        <!-- 内容 -->
+        <div class="team-wrap col j-c a-c">
+            <div class="com-eg-title">TEAM</div>
+            <div class="com-title col a-c j-c">团队介绍</div>
+            <div class="person-wrap col  a-c">
+                <div class="person-item">
+                    <img class="person wow animated animated" src="img/team/person_1.png" alt="">
+                    <img class="person wow animated animated" src="img/team/person_2.png" alt="">
+                    <img class="person" src="img/team/person_3.png" alt="">
+                    <img class="person" src="img/team/person_4.png" alt="">
+                    <img class="person" src="img/team/person_5.png" alt="">
+                    <img class="person" src="img/team/person_6.png" alt="">
+                    <img class="person" src="img/team/person_7.png" alt="">
+                    <img class="person" src="img/team/person_8.png" alt="">
+                </div>
+                <div class="btn-wrap row f-w">
+                    <img class="btn" src="img/team/btn_1.png" alt="">
+                    <img class="btn" src="img/team/btn_2.png" alt="">
+                    <img class="btn" src="img/team/btn_3.png" alt="">
+                    <img class="btn" src="img/team/btn_4.png" alt="">
+                    <img class="btn" src="img/team/btn_5.png" alt="">
+                    <img class="btn" src="img/team/btn_6.png" alt="">
+                    <img class="btn" src="img/team/btn_7.png" alt="">
+                    <img class="btn" src="img/team/btn_8.png" alt="">
+                </div>
+            </div>
+            <div class="com-eg-title">HONOR OF QUALIFICATION</div>
+            <div class="com-title col a-c j-c">资质荣誉</div>
+            <div class="banner-wrap">
+                <img class="banner-img" src="img/team/banner.png" alt="">
+                <div class="swiper-container" id="team">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"> <img class="swiper-img" src="img/team/banner_1.png" alt=""></div>
+                        <div class="swiper-slide"> <img class="swiper-img" src="img/team/banner_1.png" alt=""></div>
+                        <div class="swiper-slide"> <img class="swiper-img" src="img/team/banner_1.png" alt=""></div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
+                </div>
 
-
-
+            </div>
+        </div>
         <!-- 底部 -->
         <div class="btm-wrap col a-c">
             <div class="btm-list row j-c">
@@ -158,8 +200,39 @@
 <script src="js/share.js"></script>
 <script src="js/title.js"></script>
 <script src="js/coment.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/swiper.min.js"></script>
 <script>
     $(function () {
+        // 切换人物
+        $(".person").eq(0).css('display', 'block')
+        $(".btn").eq(0).addClass('btn-hover')
+        $('.btn').click(function () {
+            var index = $('.btn').index($(this));
+            console.log(index)
+            $(".btn").removeClass('btn-hover')
+            $(this).addClass('btn-hover')
+            $(".person").css('display', 'none')
+            $(".person").eq(index).css('display', 'block')
+        })
+        // 轮播
+        var mySwiper = new Swiper('#team', {
+            direction: 'horizontal',
+            speed: 500,
+            loop: true,
+            observer: true,
+            observeParents: true,
+            initialSlide: 0,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+
+            },
+        })
 
     })
 </script>

@@ -1,0 +1,12 @@
+.detail-wrap{
+    padding: .3rem;
+}
+.detail-title{
+    font-size: .4rem;
+}
+.detail-date{
+    font-size: .28rem;
+}
+.detail-content>img{
+    max-width: 100%;
+}

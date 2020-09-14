@@ -1,0 +1,42 @@
+
+
+.group-nav{
+    width: 100%;
+    height: .76rem;
+    background-color: #f2f2f2;
+}
+.nav-group-item{
+    margin-left: .48rem;
+    color: #323232;
+    font-size: .28rem;
+}
+.textHover{
+    color: #bea16c;
+    font-weight: 700;
+}
+.group-wrap{
+    margin-bottom: 2rem;
+}
+.swiper-list{
+    width: 100%;
+}
+.swiper-item {
+    background-color: #ffffff;
+    width:3.7rem;
+    margin-bottom: .2rem;
+    overflow: hidden;
+}
+.swiperimg4 {
+    width:3.7rem;
+    height:2.1rem;
+    transition: all 0.5s;
+}
+.swiper-item>.swiper-btm>.name {
+    font-size: .28rem;
+    color: #313131;
+}
+.desCon {
+    color: #9a9a9a;
+    font-size: .2rem;
+    margin-top: 10px;
+}

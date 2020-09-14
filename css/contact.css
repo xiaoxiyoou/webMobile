@@ -1,0 +1,141 @@
+.cont-wrap{
+    padding: .7rem .3rem;
+}
+.cont-cont{
+    margin-top: .87rem;
+}
+.cont-title{
+    font-size: .28rem;
+    color: #212121;
+    margin-bottom: .1rem;
+    font-weight: 700;
+}
+.cont-area{
+    font-size: .22rem;
+    color: #666666;
+}
+.cont-area_2{
+    font-size: .22rem;
+    color: #666666;
+    margin-bottom: .2rem;
+}
+.cont-list{
+    margin-top: .22rem;
+    width: 6.53rem;
+    height: 1.9rem;
+    background-color: #ebebe9;
+    padding:  0 .23rem;
+}
+.qrcode{
+    width: 1.38rem;
+    height: 1.38rem;
+}
+.cont-name{
+    color: #999999;
+    font-size: .28rem;
+}
+.cont-name>span{
+    color:#212121;
+    font-weight: 700;
+}
+.cont-tip{
+    color: #c5a064;
+    font-size: .28rem;
+    margin-top: .3rem;
+}
+/* 基本信息 */
+.msg-title{
+    font-size: .28rem;
+    color: #222222;
+    margin-top: 1rem;
+}
+.msg-list{
+    height: 1.41rem;
+    width: 6.53rem;
+    border:1px solid #e6e6e6;
+    border-radius: .05rem;
+    margin-top: .35rem;
+}
+.msg-img{
+    width: .67rem;
+    height: .71rem;
+    margin-left: .21rem;
+}
+.msg-item{
+    margin-left: .21rem;
+}
+.msg-name{
+    font-size: .28rem;
+    color: #999999;
+}
+.msg-des{
+    font-size: .28rem;
+    color: #444444;
+    margin-top: .1rem;
+}
+#map {
+    width: 6.53rem;
+    height: 4.18rem;
+    margin-top: .58rem;
+    margin-bottom: .73rem;
+}
+/* 意见与建议 */
+.contact-item-right{ 
+    width:6.53rem;
+    background-color: #ebebe9;
+}
+.contact-item-right>.mian{
+    text-align: center;
+    color: #222222;
+    font-size: .28rem;
+    margin-top: .52rem;
+    font-weight: 700;
+}
+.contact-item-right>.phone{
+    margin-top: .27rem;
+    color: #999999;
+    font-size: .22rem;
+    width: 5.14rem;
+}
+.phoneGet{
+    width: 5.14rem;
+    height: .59rem;
+    background-color: #ffffff;
+    border: .01rem solid #c5a064;
+    border-radius: .05rem;
+    margin-top: .16rem;
+    font-size: .25rem;
+    padding: .08rem;
+
+}
+.comment{
+    width: 5.14rem;
+    margin-top: .23rem;
+    color: #999999;
+    font-size: .22rem;
+
+}
+textarea{
+    width:  5.14rem;
+    height: 1.74rem;
+    background-color: #ffffff;
+    border: .01rem solid #c5a064;
+    border-radius: .05rem;
+    margin-top: .16rem;
+    font-size: .25rem;
+    padding: .08rem;
+    font-family: MicrosoftYaHei;
+
+}
+.submit{
+    width: 5.14rem;
+    height: .71rem;
+    background-color: #c5a064;
+    border-radius: .05rem;
+    color: #ffffff;
+    margin-top: .48rem;
+    margin-bottom: .71rem;
+    font-size: .28rem;
+
+
+}

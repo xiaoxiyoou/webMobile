@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="css/title.css" />
     <link rel="stylesheet" href="css/btm.css" />
     <link rel="stylesheet" href="css/com.css" />
+    <link rel="stylesheet" href="css/undertaker.css" />
     <title>首页</title>
 </head>
 
 <body>
-    <div class="contain">
+    <div class="contain" id="app" v-cloak>
         <!-- 占位 -->
         <div class="nav-pos"></div>
         <!-- 导航栏 -->
@@ -118,9 +119,23 @@
                 </div>
             </div>
         </div>
-
-
-
+        <!-- 内容 -->
+        <div class="work-wraper">
+            <div class="work-wrap row f-w j-b">
+                <div class="work-cont col " v-for="(item,index) in dataList" :key="index">
+                    <div class="img-wrap">
+                        <img class="work-img" :src="item.imgurl" alt="">
+                    </div>
+                    <div class="work-list col a-c j-a">
+                        <div class="name">{{item.title}}</div>
+                        <div class="des row a-c j-c">{{item.subtitle}}</div>
+                        <div class="com" v-if="item.intro">{{item.intro}}</div>
+                        <div class="com" v-else>暂无信息~</div>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
         <!-- 底部 -->
         <div class="btm-wrap col a-c">
             <div class="btm-list row j-c">
@@ -151,6 +166,9 @@
         </div>
     </div>
 </body>
+<script src="js/vue.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/undertaker.js"></script>
 <script src="js/jquery-1.8.2.js"></script>
 <script src="js/noScaling.js"></script>
 <script src="js/layer.js"></script>
@@ -158,6 +176,7 @@
 <script src="js/share.js"></script>
 <script src="js/title.js"></script>
 <script src="js/coment.js"></script>
+
 <script>
     $(function () {
 

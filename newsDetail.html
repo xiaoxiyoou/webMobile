@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>新闻详情</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/newsDetail.css" />
+</head>
+
+<body>
+  <div class="contain " id="app" v-cloak>
+    <div class="detail-wrap " id="title">
+      <div class="detail-cont  col j-c ">
+        <div class="detail-title">{{info.title}}</div>
+        <div class="detail-date">发布时间：{{info.updatetime}} <span style="margin-left: 20px;"
+            v-if="info.source">文章来源：{{info.source}}</span></div>
+        <div class="detail-list col j-c a-c">
+          <div class="detail-content" v-html="info.contents">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <script src="js/jquery-1.8.2.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/title.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/coment.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/newsDetail.js"></script>
+    <script>
+      $(".detail-btm-btm").click(function () {
+        window.history.go(-1)
+      });
+    </script>
+</body>
+
+</html>
