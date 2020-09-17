@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="css/title.css" />
     <link rel="stylesheet" href="css/btm.css" />
     <link rel="stylesheet" href="css/com.css" />
-    <title>首页</title>
+    <link rel="stylesheet" href="css/industry.css" />
+    <!-- <link rel="stylesheet" href="css/group.css" /> -->
+    <title>行业动态</title>
 </head>
 
 <body>
-    <div class="contain">
+    <div class="contain" id="app" v-cloak>
         <!-- 占位 -->
         <div class="nav-pos"></div>
         <!-- 导航栏 -->
@@ -118,8 +120,48 @@
                 </div>
             </div>
         </div>
-
-
+        <!-- 内容 -->
+        <div class="group-nav row a-c">
+            <div class="nav-group-item" :class="{'textHover':isActive == index}" v-for="(item,index) in navList"
+                :key="index" @click="getlist(item.limit, item.cate,index)">{{item.name}}</div>
+        </div>
+        <!-- 行业大会 -->
+        <div class="meet-wrap" v-if="swiper">
+            <a :href="'./newsDetail.html?id='+ item.id" v-for="(item,index) in conferenceList" :key="index">
+                <div class="meet-item ">
+                    <div class="img-wrap">
+                        <div class="des">{{item.title}}人观看</div>
+                    </div>
+                    <div class="meet-btm row j-b">
+                        <img class="meetimg4" :src="item.imgurl" alt="">
+                        <div class="name">{{item.title}}</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 殡葬新闻 -->
+        <div class="news-wrap" v-if="meet">
+            <a :href="'./newsDetail.html?id='+ item.id" v-for="(item,index) in  funeralList" :key="index">
+                <div class="news-item row">
+                    <div class="cont-wrap col j-b">
+                        <div class="cont-title slideInUp wow">{{item.title}}</div>
+                        <div class="cont-des slideInUp wow">{{item.subtitle}}</div>
+                        <div class="cont-time slideInUp wow">发布时间：{{item.createdate}}</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 传统文化 -->
+        <div class="tra-wrap">
+            <a :href="'./newsDetail.html?id='+ item.id" v-for="(item,index) in cultureList" :key="index">
+                <div class="culture-item col a-c">
+                    <div class="culture-title row a-c">
+                        {{item.title}}
+                    </div>
+                    <img class="culture-img" :src="item.imgurl" alt="">
+                </div>
+              </a>
+        </div>
 
         <!-- 底部 -->
         <div class="btm-wrap col a-c">
@@ -151,6 +193,9 @@
         </div>
     </div>
 </body>
+<script src="js/vue.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/industry.js"></script>
 <script src="js/jquery-1.8.2.js"></script>
 <script src="js/noScaling.js"></script>
 <script src="js/layer.js"></script>

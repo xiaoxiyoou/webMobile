@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="css/title.css" />
     <link rel="stylesheet" href="css/btm.css" />
     <link rel="stylesheet" href="css/com.css" />
-    <title>首页</title>
+    <link rel="stylesheet" href="css/assit.css" />
+    <link rel="stylesheet" href="css/mobileSelect.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <title>帮扶计划</title>
 </head>
 
 <body>
@@ -119,38 +122,72 @@
             </div>
         </div>
 
+        <!-- 内容 -->
+        <div class="container col a-c">
+            <img class="bannerPic" src="img/assist/banner.png" alt="">
+            <div class="titleCon">
+                <img class="title" src="img/assist/pic1.png" alt="">
+                <div class="bannerCon col a-c">
+                    <!-- <swiper :options="swiperOption" class="banner col a-c">
+                        <div class="swiper-slide" v-for="(image,index) in banner" :key="index"> <img
+                                class="swiper-picture" :src="image" alt="" />
+                        </div>
+                        <div class="swiper-pagination" slot="pagination"></div>
+                    </swiper>
+                    <div class="swiper-button-next leftOne" slot="button-next"></div>
+                    <div class="swiper-button-prev rightOne" slot="button-prev"></div> -->
+                    <div class="banner">
 
-
-        <!-- 底部 -->
-        <div class="btm-wrap col a-c">
-            <div class="btm-list row j-c">
-                <a href="./brand.html">
-                    <div class="btm-text">品牌产品</div>
-                </a>
-                <a href="./serviceSystem.html">
-                    <div class="btm-text">服务策划
+                        <div class="swiper-container" id="team">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"> <img class="swiper-img" src="img/assist/swiper.png" alt="">
+                                </div>
+                                <div class="swiper-slide"> <img class="swiper-img" src="img/assist/swiper1.png" alt="">
+                                </div>
+                                <div class="swiper-slide"> <img class="swiper-img" src="img/assist/swiper2.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 如果需要导航按钮 -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <!-- 如果需要分页器 -->
+                            <div class="swiper-pagination"></div>
+                        </div>
                     </div>
-                </a>
-                <a href="./funeralService.html">
-                    <div class="btm-text">解决方案
+                    <div class="shop">连云港永安堂殡葬服务公司</div>
+                </div>
+                <img class="title1" src="img/assist/pic3.png" alt="">
+                <img class="title" src="img/assist/pic2.png" alt="">
+                <div class="content col a-c" id="apply">
+                    <img class="top" src="img/assist/join.png" alt="" ref="pronbit">
+                    <div class="item col a-c">
+                        <input class="name com" type="text" name="name" placeholder="请输入您的称呼" v-model="name">
+                        <input class="tel com" type="number" name="phone" placeholder="请输入手机号码" v-model="mobile">
+                        <input class="address com" id="txt_area" placeholder="请选择您所在的城市" name="address" v-model="address"
+                            @click="areaShowList" readonly="readonly">
+                        <div class="receive row a-c">
+                            <img class="select" src="img/assist/select.png" v-if="select" @click="selectShow(false)">
+                            <!-- <img class="" src="img/assist/select1.png" v-if="!select" @click="selectShow(true)"> -->
+                            <div class="text textHover">我已阅读并接受《服务须知》《隐私政策》</div>
+                            <!-- <div class="text " v-if="!select">我已阅读并接受《服务须知》《隐私政策》</div> -->
+                        </div>
+                        <div class="textbtn row j-c a-c" @click="_unionApply">马上申请</div>
+                        <div class="tip">请填写您的联系方式以便为您安排专员服务。</div>
                     </div>
-                </a>
-                <a href="./assist.html">
-                    <div class="btm-text">帮扶计划</div>
-                </a>
-                <a href="./group.html">
-                    <div class="btm-text">新闻中心</div>
-                </a>
-                <a href="./introduce.html">
-                    <div class="btm-text" style="border-right: 1px solid #bea16c;"> 关于我们</div>
-                </a>
+                </div>
             </div>
-            <div class="btm-tip">让殡葬行业成为受社会尊重的行业</div>
-            <div class="btm-record ">©2019 孝子部落集团网站 <a style="color:#ffffff"
-                    href="http://icp.chinaz.com/home/info?host=xiaozibl.com">辽ICP备19011194号-1 </a></div>
+
+            <div class="btmFix row a-c j-c" v-if="showBtn"></div>
+            <a href="#apply">
+                <div class="btn row j-c a-c" v-if="showBtn" @click="scrollIntoView">马上申请</div>
+            </a>
         </div>
+
     </div>
 </body>
+<script src="js/vue.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/assit.js"></script>
 <script src="js/jquery-1.8.2.js"></script>
 <script src="js/noScaling.js"></script>
 <script src="js/layer.js"></script>
@@ -158,9 +195,127 @@
 <script src="js/share.js"></script>
 <script src="js/title.js"></script>
 <script src="js/coment.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/mobileSelect.min.js"></script>
 <script>
     $(function () {
+        var select = 1
+        // 获取本地城市Json
+        var cityObj = new Object;
+        $.ajax({
+            url: "js/city.json",
+            type: "GET",
+            dataType: "json",
+            async: false,
+            success: function (res) {
 
+                cityObj = res;
+            }
+        })
+
+        var arr = []
+        var mobileSelect1 = new MobileSelect({
+            trigger: '#txt_area',
+            title: '',
+            wheels: [{
+                data: cityObj
+            }],
+            position: [0, 0, 0], //初始化定位 打开时默认选中的位置 如果不填默认为0
+            transitionEnd: function (indexArr, data) {
+
+
+            },
+            callback: function (indexArr, data) {
+                console.log(data);
+                arr = []
+                data.forEach(function (item) {
+                    arr.push(item.value);
+                });
+                $("input[name='address']").eq(0).val(arr.join(""));
+            }
+        });
+        $('body').on('click', 'a ', function () {
+            $("html, body").animate({
+                scrollTop: $($(this).attr("href")).offset().top + "px"
+            }, 500);
+            return false;
+
+        });
+        // 轮播
+        var mySwiper = new Swiper('#team', {
+            direction: 'horizontal',
+            speed: 500,
+            loop: true,
+            observer: true,
+            observeParents: true,
+            initialSlide: 0,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+
+            },
+            navigation: {
+                nextEl: '.swiper-button-next', //自动隐藏
+                prevEl: '.swiper-button-prev', //自动隐藏
+                hiddenClass: 'btn-hidden', //某些情况下需要隐藏前进后退按钮时，可以设定一个自定义的类名。
+            }
+        })
+        $(".select").click(function () {
+            if ($(".select").attr("src") == "img/assist/select.png") {
+                $(this).attr("src", "img/assist/unselect.png")
+                select = 0
+            } else {
+                $(this).attr("src", "img/assist/select.png")
+                select = 1
+            }
+            console.log(select)
+        })
+        $(".textbtn").click(function () {
+            if (!$("input[ name='name'] ").val()) {
+                alert('请输入您的姓名')
+                return false
+            } else if (!$("input[ name='phone'] ").val()) {
+                alert('请输入手机号码')
+                return false
+            } else if (!$("input[ name='address'] ").val()) {
+                alert('请输入您的所在城市')
+                return false
+            } else if (!select) {
+                alert('请先阅读并接受《服务须知》《隐私政策》')
+                return false
+            } else {
+                unionApply()
+            }
+        });
+        //post()方式
+        function unionApply() {
+            $.ajax({
+                url: 'http://union.app.jzb768.com/api/union/apply',
+                type: 'post',
+                async: false,
+                dataType: 'json',
+                data: {
+                    name: $("input[ name='name'] ").val(),
+                    mobile: $("input[ name='phone'] ").val(),
+                    address: $("input[ name='address'] ").val(),
+                    // type: 1
+                },
+                success: function (data) {
+                    console.log('城商申请', data)
+                    if (data.code == 0) {
+                        alert('申请成功!')
+                    } else {
+                        alert(data.msg)
+                    }
+                },
+                error: function (error) {
+                    alert(error)
+                }
+            })
+        }
     })
 </script>
 

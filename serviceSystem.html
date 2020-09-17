@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="css/title.css" />
     <link rel="stylesheet" href="css/btm.css" />
     <link rel="stylesheet" href="css/com.css" />
-    <title>首页</title>
+    <!-- <link rel="stylesheet" href="css/assit.css" /> -->
+    <link rel="stylesheet" href="css/serviceSystem.css" />
+    <title>服务策划</title>
 </head>
 
 <body>
@@ -119,8 +121,69 @@
             </div>
         </div>
 
-
-
+        <!-- 内容 -->
+        <div class="ser-wrap col j-c a-c">
+            <div class="ser-top col j-c a-c">
+                <div class="com-eg-title">SERVICE PLAN</div>
+                <div class="com-title col a-c j-c">服务策划</div>
+                <div class="ser-top-list row f-w j-b">
+                    <a href="http://wx.app.jzb768.com/#/funeralPlanning">
+                        <div class="ser-top-item">
+                            <img class="ser-img" src="img/serviceSystem/icon_1.png" alt="" />
+                            <div class="ser-title">殡仪策划</div>
+                            <div class="ser-des">FUNERAL PLANNING</div>
+                        </div>
+                    </a>
+                    <a href="http://wx.app.jzb768.com/#/burialPlanning">
+                        <div class="ser-top-item">
+                            <img class="ser-img" src="img/serviceSystem/icon_1.png" alt="" />
+                            <div class="ser-title">安葬策划</div>
+                            <div class="ser-des">BURIAL PLOT</div>
+                        </div>
+                    </a>
+                    <a href="http://wx.app.jzb768.com/#/deathbed">
+                        <div class="ser-top-item">
+                            <img class="ser-img" src="img/serviceSystem/icon_1.png" alt="" />
+                            <div class="ser-title">临终关怀</div>
+                            <div class="ser-des">HOSPICE CARE</div>
+                        </div>
+                    </a>
+                    <a href="http://wx.app.jzb768.com/#/memorial">
+                        <div class="ser-top-item">
+                            <img class="ser-img" src="img/serviceSystem/icon_1.png" alt="" />
+                            <div class="ser-title">线上追思</div>
+                            <div class="ser-des">ONLINE MEMORIAL</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--    地图 -->
+            <div class="map-wrap col a-c ">
+                <div class="map-title">全国现已有130+</div>
+                <div class="map-des">加入条件，所在城市综合排名前5名+</div>
+                <div class="map-des">每20万人口仅限一家，全国每年仅限80家</div>
+                <img class="map-img" src="img/serviceSystem/map.png" alt="" />
+                <div class="map-tip">品宣、获客、提效、规范、增绩，全方位为您服务</div>
+                <a href="./assist.html">
+                    <div class="map-btn row a-c j-c">了解详情</div>
+                </a>
+            </div>
+            <div class="container col a-c">
+                <div class="content col a-c" id="apply">
+                    <div class="title">查询当地联盟商</div>
+                    <div class="item col a-c">
+                        <input class="address com" id="txt_area" placeholder="请选择您所在的城市" name="address"
+                        v-model="address" @click="areaShowList" readonly="readonly">
+                        <input class="name com" type="text" name="name" placeholder="请输入您的称呼" v-model="name">
+                        <input class="tel com" type="number" name="phone" placeholder="请输入手机号码" v-model="mobile">
+                     
+                     
+                        <div class="textbtn row j-c a-c" @click="_unionApply">查询</div>
+                        <div class="tip">查询城市已有8家联盟商家</div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- 底部 -->
         <div class="btm-wrap col a-c">
             <div class="btm-list row j-c">

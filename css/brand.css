@@ -1,0 +1,55 @@
+.brand-wrap{}
+.brand-wrap>.logo {
+    width: 1.31rem;
+    height: 1.31rem;
+    margin: 0 .5rem;
+    margin-top: .43rem;
+}
+
+.brand-wrap>.title {
+    margin: .3rem .5rem;
+    color: #333333;
+    font-size: .28rem;
+}
+
+.brand-wrap>.des {
+    margin: 0 .5rem;
+    color: #333333;
+    font-size: .2rem;
+}
+
+.banner-wrap {
+    position: relative;
+}
+
+.banner-wrap>.btn {
+    width: 1.92rem;
+    height: .49rem;
+    border-radius: .24rem;
+    border: 1px solid #bea16c;
+    color: #ffffff;
+    font-size: .24rem;
+    margin-top: .2rem;
+    background-color: #bea16c;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: .49rem;
+    margin-top: 0.4rem;
+    /* position: absolute; */
+    /* top: .5rem; */
+}
+
+.banner-wrap>.banner {
+    width: 7.5rem;
+    /* height: 8.29rem; */
+}
+
+.swiper-pagination {
+    position: fixed!important;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background-color: #bea16c!important;
+}

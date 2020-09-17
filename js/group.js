@@ -4,23 +4,37 @@ var app = new Vue({
         courseList: "",
         meetList: "",
         dynamicList: "",
-        navList:[
-            {name:'开课信息',limit:50,cate:10007},
-            {name:'公司会议',limit:50,cate:10000},
-            {name:'公司动态',limit:50,cate:10009},
+        navList: [{
+                name: '开课信息',
+                limit: 50,
+                cate: 10010
+            },
+            {
+                name: '公司会议',
+                limit: 50,
+                cate: 10001
+            },
+            {
+                name: '公司动态',
+                limit: 50,
+                cate: 10002
+            },
         ],
-        isActive:0
+        isActive: 0,
+        swiper: true,
+        meet: false,
+        news: false,
 
 
 
     },
     methods: {
-         // 数字不到10的用0补齐
-         sun:function (s) {
-            return s < 10 ? '0' + s: s;
+        // 数字不到10的用0补齐
+        sun: function (s) {
+            return s < 10 ? '0' + s : s;
         },
         //   获取所有文章列表
-        getlist(limit, cate,index) {
+        getlist(limit, cate, index) {
             var that = this;
             this.isActive = index
             axios.get('http://www.api.s.xiaozibl.com/api/news/getlist', {
@@ -34,12 +48,21 @@ var app = new Vue({
                     if (cate == 10010) {
                         that.courseList = res.data.data.item
                         console.log('开课信息', that.courseList);
+                        that.swiper = true
+                        that.meet = false
+                        that.news = false
                     } else if (cate == 10001) {
                         that.meetList = res.data.data.item
                         console.log('公司会议', that.meetList);
+                        that.swiper = false
+                        that.meet = true
+                        that.news = false
                     } else if (cate == 10002) {
                         that.dynamicList = res.data.data.item
                         console.log('公司动态', that.dynamicList);
+                        that.swiper = false
+                        that.meet = false
+                        that.news = true
                     }
                 })
                 .catch(function (error) {
@@ -50,9 +73,8 @@ var app = new Vue({
 
     },
     mounted() {
-        this.getlist(10, 10010,0)
-        // this.getlist(3, 10001)
-        // this.getlist(6, 10002)
+        this.getlist(10, 10010, 0)
+
 
     }
 

@@ -12,3 +12,109 @@
     color: #bea16c;
     font-weight: 700;
 }
+/* 开课信息 */
+.swiper-wrap{
+    padding-bottom: 2rem;
+}
+.swiper-item {
+    padding-right: .4rem;
+    height: 2.27rem;
+    margin-left: .49rem;
+    border-bottom: 1px solid #f2f2f2;
+}
+.swiperimg4{
+    width: 2.32rem;
+    height: 1.64rem;
+    border-radius: .05rem;
+}
+.swiper-btm{
+    height: 1.64rem;
+    width: 4rem;
+}
+.swiper-item>.swiper-btm>.name {
+    color: #5f5f5f;
+    font-size: .32rem;
+}
+.swiper-item>.swiper-btm>.des {
+    font-size: .2rem;
+    color:#8a898a;
+    text-align: right;
+}
+/* 公司会议 */
+.meet-wrap{
+    padding-bottom: 2rem;
+}
+.meet-item {
+    padding:.36rem  .4rem .29rem .32rem;
+    border-bottom: .17rem solid #f2f2f2;
+}
+.meetimg4{
+    width: 2.32rem;
+    height: 1.64rem;
+    border-radius: .05rem;
+}
+.meet-btm{
+    height: 1.64rem;
+    margin-top: .3rem;
+    width: 100%;
+}
+.meet-item>.meet-btm>.name {
+    width: 4rem;
+    color: #5f5f5f;
+    overflow:hidden;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:4;
+    text-overflow:ellipsis;
+    font-size: .2rem;
+}
+.meet-item>.img-wrap>.des {
+    width: 100%;
+    font-size: .32rem;
+    color:#8a898a;
+    overflow:hidden;
+    display:-webkit-box;
+   -webkit-box-orient:vertical;
+    -webkit-line-clamp:1;
+    text-overflow:ellipsis;
+}
+/* 公司动态 */
+.news-wrap{
+    padding-bottom: 2rem;
+}
+.news-item{
+    height: 2.4rem;
+    padding: .23rem .46rem .37rem .21rem;
+    border-bottom: .17rem solid #f2f2f2;
+}
+.cont-title {
+    color: #1e1e1e;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    font-size: .32rem;
+    width: 324px;
+}
+.cont-des {
+    color: #333333;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    font-size:.23rem;
+    margin-top: .1rem;
+}
+.cont-time {
+    text-align: right;
+    color: #a8a8a8;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    font-size:.22rem;
+    margin-top: .1rem;
+}

@@ -124,7 +124,46 @@
             <div class="nav-group-item" :class="{'textHover':isActive == index}" v-for="(item,index) in navList"
                 :key="index" @click="getlist(item.limit, item.cate,index)">{{item.name}}</div>
         </div>
-
+        <!-- 开课信息 -->
+        <div class="swiper-wrap" v-if="swiper">
+            <a :href="'./newsDetail.html?id='+ item.id" v-for="(item,index) in courseList" :key="index">
+                <div class="swiper-item row j-b a-c">
+                    <div class="img-wrap">
+                        <img class="swiperimg4" :src="item.imgurl" alt="">
+                    </div>
+                    <div class="swiper-btm col j-b">
+                        <div class="name">{{item.title}}</div>
+                        <div class="des">{{item.look}}人观看</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 公司会议 -->
+        <div class="meet-wrap"  v-if="meet">
+            <a :href="'./newsDetail.html?id='+ item.id" v-for="(item,index) in meetList" :key="index">
+                <div class="meet-item col j-b a-c">
+                    <div class="img-wrap">
+                        <div class="des">{{item.title}}人观看</div>
+                    </div>
+                    <div class="meet-btm row j-b">
+                        <img class="meetimg4" :src="item.imgurl" alt="">
+                        <div class="name">{{item.title}}</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 公司动态 -->
+        <div class="news-wrap" v-if="news">
+            <a :href="'./newsDetail.html?id='+ item.id" v-for="(item,index) in  dynamicList" :key="index">
+                <div class="news-item row">
+                    <div class="cont-wrap col j-b">
+                        <div class="cont-title slideInUp wow">{{item.title}}</div>
+                        <div class="cont-des slideInUp wow">{{item.subtitle}}</div>
+                        <div class="cont-time slideInUp wow">发布时间：{{item.createdate}}</div>
+                    </div>
+                </div>
+            </a>
+        </div>
 
         <!-- 底部 -->
         <div class="btm-wrap col a-c">

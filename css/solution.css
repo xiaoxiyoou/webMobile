@@ -1,0 +1,42 @@
+.solu-wrap{
+    background-color: #ebebe9;
+}
+.solu-sbTitle{
+    color: #888886;
+    font-size: .2rem;
+    margin-top: .51rem;
+}
+.solu-title{
+    color: #2c3d4e;
+    font-size: .28rem;
+    margin-top: .07rem;
+    width: 3.65rem;
+    height: .76rem;
+    border: 1px solid #888886;
+}
+.solu-list{
+    width: 100%;
+}
+.solu-list{
+    margin-top: .76rem;
+    margin-bottom: .6rem;
+}
+.solu-img{
+    width: .64rem;
+    height: .64rem;
+    margin-bottom: .1rem;
+}
+.solu-des{
+    color: #192548;
+    font-size: .23rem;
+}
+.mideg-title{
+    color: #888886;
+    font-size: .2rem;
+    margin-top: .67rem;
+}
+.mid-title{
+    color: #2c3d4e;
+    font-size: .28rem;
+    margin-bottom: .5rem;
+}
