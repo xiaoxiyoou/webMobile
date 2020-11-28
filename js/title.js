@@ -1,23 +1,33 @@
+var flag = true
 // 显示导航栏
 $(".nav-more").click(function () {
-    $(".nav-cont").css("display", "block")
-    $(".nav-cont").addClass("slideInLeft")
-    $(".nav-cont").removeClass("slideOutLeft")
+    if (flag) {
+        $(".nav-cont").css("display", "block")
+        $(".nav-mask").css("display", "block")
+        $(".nav-cont").addClass("slideInLeft")
+        $(".nav-cont").removeClass("slideOutLeft")
+    }
 })
 // 关闭导航栏
 $(".nav-mask").click(function () {
+    flag = false
     $(".nav-cont").addClass("slideOutLeft")
     $(".nav-cont").removeClass("slideInLeft")
+    $(".nav-mask").css("display", "none")
     setTimeout(function () {
         $(".nav-cont").css("display", "none")
-    }, 1000)
+        flag = true
+    }, 500)
 })
 $(".nav-close").click(function () {
+    flag = false
     $(".nav-cont").addClass("slideOutLeft")
     $(".nav-cont").removeClass("slideInLeft")
+    $(".nav-mask").css("display", "none")
     setTimeout(function () {
         $(".nav-cont").css("display", "none")
-    }, 1000)
+        flag = true
+    }, 500)
 })
 
 $('.nav-list').click(function () {

@@ -39,6 +39,7 @@
     left: 0;
     z-index: 9;
     opacity: 0.3;
+    display: none;
 }
 .nav-cont{
     display: none;
