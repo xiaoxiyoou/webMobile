@@ -3,20 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>殡仪服务策划_殡仪策划_安葬策划_临终关怀_线上追思_孝子部落集团官网_殡葬教育_殡葬生态服务_电子讣告_风水盒</title>
+    <meta name="keywords"
+        content="骨灰盒、寿衣、殡葬用品、电子讣告、讣告、殡葬教育、殡仪服务、在线祭祀、在线祭扫、云扫墓、云祭扫、云祭祀、清明祭祖、清明扫墓、殡葬文化、网上祭祀、网上扫墓、网上祭拜、祭祀服务、祭祀、墓园、一条龙、白事、丧葬服务">
+    <meta name="description" content="孝子部落集团定位新殡葬产业服务商，为殡葬企业一站式提能增效解决方案，为殡葬企业提供三大赋能服务：殡业培训教育、软件科
+    技服务、优品采购服务。专注为殡葬商家提供一站式提能增效解决方案，规范殡葬市场、提升服务品质、增加顾客数量、改善管理效率、提升企业业绩。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <script src="js/rem.js"></script>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/title.css" />
     <link rel="stylesheet" href="css/btm.css" />
     <link rel="stylesheet" href="css/com.css" />
-    <!-- <link rel="stylesheet" href="css/assit.css" /> -->
+    <link rel="stylesheet" href="css/mobileSelect.css" />
     <link rel="stylesheet" href="css/serviceSystem.css" />
-    <title>服务策划</title>
+    <link rel="stylesheet" href="css/variable.css" />
+    <link rel="stylesheet" href="css/mask.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.10/lib/index.css" />
 </head>
 
 <body>
-    <div class="contain">
+    <div class="contain" id="app" v-cloak>
         <!-- 占位 -->
         <div class="nav-pos"></div>
         <!-- 导航栏 -->
@@ -136,25 +142,31 @@
                     </a>
                     <a href="http://wx.app.jzb768.com/#/burialPlanning">
                         <div class="ser-top-item">
-                            <img class="ser-img" src="img/serviceSystem/icon_1.png" alt="" />
+                            <img class="ser-img" src="img/serviceSystem/icon_2.png" alt="" />
                             <div class="ser-title">安葬策划</div>
                             <div class="ser-des">BURIAL PLOT</div>
                         </div>
                     </a>
                     <a href="http://wx.app.jzb768.com/#/deathbed">
                         <div class="ser-top-item">
-                            <img class="ser-img" src="img/serviceSystem/icon_1.png" alt="" />
+                            <img class="ser-img" src="img/serviceSystem/icon_3.png" alt="" />
                             <div class="ser-title">临终关怀</div>
                             <div class="ser-des">HOSPICE CARE</div>
                         </div>
                     </a>
-                    <a href="http://wx.app.jzb768.com/#/memorial">
-                        <div class="ser-top-item">
-                            <img class="ser-img" src="img/serviceSystem/icon_1.png" alt="" />
-                            <div class="ser-title">线上追思</div>
-                            <div class="ser-des">ONLINE MEMORIAL</div>
-                        </div>
-                    </a>
+                    <div class="ser-top-item" id="memory">
+                        <img class="ser-img" src="img/serviceSystem/icon_4.png" alt="" />
+                        <div class="ser-title">线上追思</div>
+                        <div class="ser-des">ONLINE MEMORIAL</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 追思二维码 -->
+            <div class="qr-wrap">
+                <div class="qr-mask"></div>
+                <div class="qr-cont">
+                    <img class="qr-img" src="img/serviceSystem/qrimg.png" alt="">
+                    <div class="qr-text">请在微信内识别二维码并打开</div>
                 </div>
             </div>
             <!--    地图 -->
@@ -172,18 +184,19 @@
                 <div class="content col a-c" id="apply">
                     <div class="title">查询当地联盟商</div>
                     <div class="item col a-c">
-                        <input class="address com" id="txt_area" placeholder="请选择您所在的城市" name="address"
-                        v-model="address" @click="areaShowList" readonly="readonly">
-                        <input class="name com" type="text" name="name" placeholder="请输入您的称呼" v-model="name">
-                        <input class="tel com" type="number" name="phone" placeholder="请输入手机号码" v-model="mobile">
-                     
-                     
-                        <div class="textbtn row j-c a-c" @click="_unionApply">查询</div>
-                        <div class="tip">查询城市已有8家联盟商家</div>
+                        <input class="address com" id="trigger1" placeholder="请选择省份" name="address" v-model="proDefalut"
+                            readonly="readonly">
+                        <input class="address com" id="trigger2" placeholder="请选择城市" name="address"
+                            v-model="cityDefalut" readonly="readonly" v-show="cityDefalut">
+                        <input class="name com" type="text" name="name" placeholder="请输入您的姓名" v-model="name">
+                        <input class="tel com" type="number" name="phone" placeholder="请输入手机号码" v-model="phone">
+                        <div class="textbtn row j-c a-c" @click="getlistBtn">查询</div>
+                        <div class="tip" v-if="count">查询城市已有{{count}}家联盟商家</div>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- 底部 -->
         <div class="btm-wrap col a-c">
             <div class="btm-list row j-c">
@@ -214,6 +227,11 @@
         </div>
     </div>
 </body>
+<script src="js/rem.js"></script>
+<script src="js/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vant@2.10/lib/vant.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/serviceSystem.js"></script>
 <script src="js/jquery-1.8.2.js"></script>
 <script src="js/noScaling.js"></script>
 <script src="js/layer.js"></script>
@@ -221,9 +239,112 @@
 <script src="js/share.js"></script>
 <script src="js/title.js"></script>
 <script src="js/coment.js"></script>
+<script src="js/mobileSelect.min.js"></script>
 <script>
     $(function () {
+        var mobileSelect1 = new MobileSelect({
+            trigger: '#trigger1',
+            title: '单项选择',
+            wheels: [{
+                data: [{
+                    id: '1',
+                    value: '请选择地区'
+                }, ]
+            }],
+            position: [1], //初始化定位
+            callback: function (indexArr, data) {
+                console.log(data); //返回选中的json数据
+                app.proDefalut = data[0].value
+                app.prov = data[0].id
+                citylist(data[0].id)
+            }
+        });
 
+        function prolist() {
+            $.ajax({
+                url: 'http://www.api.s.xiaozibl.com/api/store/getcity',
+                type: 'post',
+                async: false,
+                dataType: 'json',
+                success: function (res) {
+                    console.log('获取省份', res)
+                    var data1 = [];
+                    res.data.item.map((currentValue, index, arry) => {
+                        data1.push({
+                            'id': currentValue.addressid,
+                            'value': currentValue.title
+                        })
+                    })
+
+                    console.log(data1)
+                    mobileSelect1.updateWheel(0, data1); //更改第0个轮子
+                },
+                error: function (error) {
+                    alert(error)
+                }
+            })
+        }
+        prolist()
+
+        var mobileSelect2 = new MobileSelect({
+            trigger: '#trigger2',
+            title: '单项选择',
+            wheels: [{
+                data: [{
+                    id: '1',
+                    value: '请选择地区'
+                }, ]
+            }],
+            position: [0], //初始化定位
+            callback: function (indexArr, data) {
+                console.log(data); //返回选中的json数据
+                app.cityDefalut = data[0].value
+                app.city = data[0].id
+
+            }
+        });
+
+        function citylist(prov) {
+            $.ajax({
+                url: 'http://www.api.s.xiaozibl.com/api/store/getcity',
+                type: 'post',
+                async: false,
+                dataType: 'json',
+                data: {
+                    prov: prov,
+                },
+                success: function (res) {
+                    console.log('获取市', res)
+                    var data2 = [];
+                    res.data.item.map((currentValue, index, arry) => {
+                        data2.push({
+                            'id': currentValue.addressid,
+                            'value': currentValue.title
+                        })
+                    })
+
+                    console.log(data2)
+                    mobileSelect2.updateWheel(0, data2); //更改第0个轮子
+                    app.cityDefalut = data2[0].value
+                },
+                error: function (error) {
+                    alert(error)
+                }
+            })
+        }
+        // 点击线上追思
+        $("#memory").click(function () {
+            if (navigator.userAgent.toLowerCase().indexOf('micromessenger') > -1) {
+                window.location.href = "http://wx.app.jzb768.com/#/memorial"
+            } else {
+                $(".qr-wrap").css("display", "block")
+
+            }
+        })
+        // 点击遮罩层
+        $(".qr-mask ").click(function(){
+            $(".qr-wrap").css("display", "none")
+        })
     })
 </script>
 

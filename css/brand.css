@@ -1,21 +1,31 @@
-.brand-wrap{}
+.brand-wrap{
+    position: relative;
+}
+.fp-tableCell{
+    vertical-align: baseline!important;
+}
 .brand-wrap>.logo {
     width: 1.31rem;
     height: 1.31rem;
-    margin: 0 .5rem;
-    margin-top: .43rem;
+ 
+    position: absolute;
+    right: .24rem;
+    top: 0.15rem;
 }
 
 .brand-wrap>.title {
-    margin: .3rem .5rem;
+    margin: 0rem .5rem ;
     color: #333333;
-    font-size: .28rem;
+    padding-top: .5rem;
+    margin-bottom: .28rem;
+    font-weight: 700;
 }
 
 .brand-wrap>.des {
     margin: 0 .5rem;
     color: #333333;
-    font-size: .2rem;
+    font-size: .28rem;
+    text-align: justify;
 }
 
 .banner-wrap {
@@ -28,21 +38,17 @@
     border-radius: .24rem;
     border: 1px solid #bea16c;
     color: #ffffff;
-    font-size: .24rem;
-    margin-top: .2rem;
     background-color: #bea16c;
     display: block;
     margin: 0 auto;
     text-align: center;
     line-height: .49rem;
-    margin-top: 0.4rem;
-    /* position: absolute; */
-    /* top: .5rem; */
+    margin-top: .3rem;
+   
 }
 
 .banner-wrap>.banner {
     width: 7.5rem;
-    /* height: 8.29rem; */
 }
 
 .swiper-pagination {
@@ -52,4 +58,7 @@
 }
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
     background-color: #bea16c!important;
+}
+.banner{
+    margin-top: .5rem;
 }

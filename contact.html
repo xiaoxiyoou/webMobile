@@ -3,15 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>联系我们_联系方式_孝子部落集团官网_殡葬教育_殡葬生态服务_电子讣告_风水盒</title>
+    <meta name="keywords" content="骨灰盒、寿衣、殡葬用品、电子讣告、讣告、殡葬教育、殡仪服务、在线祭祀、在线祭扫、云扫墓、云祭扫、云祭祀、清明祭祖、清明扫墓、殡葬文化、网上祭祀、网上扫墓、网上祭拜、祭祀服务、祭祀、墓园、一条龙、白事、丧葬服务">
+    <meta name="description" content="孝子部落集团定位新殡葬产业服务商，为殡葬企业一站式提能增效解决方案，为殡葬企业提供三大赋能服务：殡业培训教育、软件科
+    技服务、优品采购服务。专注为殡葬商家提供一站式提能增效解决方案，规范殡葬市场、提升服务品质、增加顾客数量、改善管理效率、提升企业业绩。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <script src="js/rem.js"></script>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/title.css" />
     <link rel="stylesheet" href="css/btm.css" />
     <link rel="stylesheet" href="css/com.css" />
     <link rel="stylesheet" href="css/contact.css" />
-    <title>联系我们</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.10/lib/index.css" />
+    <!-- <title>联系我们</title> -->
 </head>
 
 <body>
@@ -244,88 +248,97 @@
         </div>
     </div>
 </body>
+<script src="js/rem.js"></script>
 <script src="js/jquery-1.8.2.js"></script>
 <script src="js/noScaling.js"></script>
+<script src="js/vue.js"></script>
 <script src="js/layer.js"></script>
 <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
 <script src="js/share.js"></script>
 <script src="js/title.js"></script>
 <script src="js/coment.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vant@2.10/lib/vant.min.js"></script>
 <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=DTJBZ-KMKK3-CAO3Q-YSYN7-RVOCF-OLB7R&size=200*200">
+
 </script>
 <script>
     $(function () {
         var init = function () {
-        var map_center = new qq.maps.LatLng(41.878564, 123.526922);
-        var map = new qq.maps.Map(document.getElementById("map"), {
-          center: map_center,
-          zoom: 13,
-          panControl: true,
-          zoomControl: true,
-          zoomControlOptions: {
-            style: qq.maps.ZoomControlStyle.SMALL
-          }
-        });
+            var map_center = new qq.maps.LatLng(41.878564, 123.526922);
+            var map = new qq.maps.Map(document.getElementById("map"), {
+                center: map_center,
+                zoom: 13,
+                panControl: true,
+                zoomControl: true,
+                zoomControlOptions: {
+                    style: qq.maps.ZoomControlStyle.SMALL
+                }
+            });
 
-        var marker = new qq.maps.Marker({
-          map: map,
-          position: map_center
-        });
+            var marker = new qq.maps.Marker({
+                map: map,
+                position: map_center
+            });
 
-        var infoWin = new qq.maps.InfoWindow({
-          map: map
-        });
+            var infoWin = new qq.maps.InfoWindow({
+                map: map
+            });
 
-        qq.maps.event.addListener(
-          marker,
-          'click',
-          function (evt) {
-            infoWin.open();
-            infoWin.setContent('<div style="text-align:center;white-space:nowrap;margin:10px;">孝子部落商学院</div>');
-            infoWin.setPosition(evt.latLng);
-          });
+            qq.maps.event.addListener(
+                marker,
+                'click',
+                function (evt) {
+                    infoWin.open();
+                    infoWin.setContent(
+                        '<div style="text-align:center;white-space:nowrap;margin:10px;">孝子部落商学院</div>'
+                    );
+                    infoWin.setPosition(evt.latLng);
+                });
 
 
-      }
-
-
-      init(); //调用地图初始化函数
-      // 点击填写意见
-      $(".submit").click(function () {
-        if (!$("input[ name='phone'] ").val()) {
-          alert('请输入手机号码')
-          return false
-        } else if (!$("#textarea").val()) {
-          alert('请输入您的意见与建议')
-          return false
-        } else {
-          unionApply()
         }
-      });
-      //post()方式
-      function unionApply() {
-        $.ajax({
-          url: 'http://www.api.s.xiaozibl.com/api/message/add',
-          type: 'post',
-          async: false,
-          dataType: 'json',
-          data: {
-            mobile: $("input[ name='phone'] ").val(),
-            intro: $("#textarea").val(),
-          },
-          success: function (data) {
-            console.log('意见申请', data)
-            if (data.code == 0) {
-              alert('添加成功!')
+
+
+        init(); //调用地图初始化函数
+        // 点击填写意见
+        $(".submit").click(function () {
+            if (!$("input[name='phone']").val()) {
+                vant.Toast('请输入手机号码');
+                return false
+            } else if (!(/^1(3|4|5|6|7|8|9)\d{9}$/.test($("input[name='phone']").val()))) {
+                vant.Toast('请输入正确电话号码')
+                return false;
+            } else if (!$("#textarea").val()) {
+                vant.Toast('请输入您的意见与建议');
+                return false
             } else {
-              alert(data.msg)
+                unionApply()
             }
-          },
-          error: function (error) {
-            alert(error)
-          }
-        })
-      }
+        });
+        //post()方式
+        function unionApply() {
+            $.ajax({
+                url: 'http://www.api.s.xiaozibl.com/api/message/add',
+                type: 'post',
+                async: false,
+                dataType: 'json',
+                data: {
+                    mobile: $("input[ name='phone'] ").val(),
+                    intro: $("#textarea").val(),
+                },
+                success: function (data) {
+                    console.log('意见申请', data)
+                    if (data.code == 0) {
+                        vant.Toast('添加成功!');
+                    } else {
+                        alert(data.msg)
+                    }
+                },
+                error: function (error) {
+                    alert(error)
+                }
+            })
+        }
 
     })
 </script>

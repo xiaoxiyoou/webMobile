@@ -27,6 +27,7 @@ var app = new Vue({
                 .then(function (res) {
                     that.info = res.data.data.info
                     console.log('新闻详情', that.info);
+                    document.title = res.data.data.info.title
                 })
                 .catch(function (error) {
                     console.log(error);

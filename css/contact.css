@@ -5,17 +5,17 @@
     margin-top: .87rem;
 }
 .cont-title{
-    font-size: .28rem;
+    font-size: .32rem;
     color: #212121;
     margin-bottom: .1rem;
     font-weight: 700;
 }
 .cont-area{
-    font-size: .22rem;
+    font-size: .28rem;
     color: #666666;
 }
 .cont-area_2{
-    font-size: .22rem;
+    font-size: .28rem;
     color: #666666;
     margin-bottom: .2rem;
 }
@@ -29,6 +29,9 @@
 .qrcode{
     width: 1.38rem;
     height: 1.38rem;
+}
+.cont-item{
+    font-size: .28rem;
 }
 .cont-name{
     color: #999999;
@@ -45,7 +48,7 @@
 }
 /* 基本信息 */
 .msg-title{
-    font-size: .28rem;
+    font-size: .30rem;
     color: #222222;
     margin-top: 1rem;
 }
@@ -104,7 +107,7 @@
     border: .01rem solid #c5a064;
     border-radius: .05rem;
     margin-top: .16rem;
-    font-size: .25rem;
+    font-size: .28rem;
     padding: .08rem;
 
 }
@@ -122,7 +125,7 @@ textarea{
     border: .01rem solid #c5a064;
     border-radius: .05rem;
     margin-top: .16rem;
-    font-size: .25rem;
+    font-size: .28rem!important;
     padding: .08rem;
     font-family: MicrosoftYaHei;
 
@@ -135,7 +138,7 @@ textarea{
     color: #ffffff;
     margin-top: .48rem;
     margin-bottom: .71rem;
-    font-size: .28rem;
+    font-size: .3rem;
 
 
 }

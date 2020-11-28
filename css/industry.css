@@ -1,83 +1,135 @@
-.group-nav{
-    width: 100%;
-    height: .76rem;
-    background-color: #f2f2f2;
-}
-.nav-group-item{
-    margin-left: .48rem;
-    color: #323232;
-    font-size: .28rem;
-}
-.textHover{
-    color: #bea16c;
-    font-weight: 700;
-}
+
 /* 行业大会 */
-.meet-wrap{
-    padding-bottom: 2rem;
+.swiper-wrap{
+    padding-bottom: 1rem;
+    margin-top: .9rem;
 }
-.meet-item {
-    padding:.36rem  .4rem .29rem .32rem;
-    border-bottom: .17rem solid #f2f2f2;
+.swiper-item {
+    padding: .23rem 0rem;
+    margin: 0 .4rem;
+    height: 2.27rem;
+    border-bottom: 1px solid #f2f2f2;
 }
-.meetimg4{
-    width: 2.21rem;
-    height: 2.02rem;
+.img-wrap{
+    width: 35%;
+    height: 1.64rem;
+    overflow: hidden;
     border-radius: .05rem;
 }
-.meet-btm{
-    margin-top: .3rem;
-    width: 100%;
+.swiperimg4{
+    width:100%;
+    height: auto;
+    min-height: 1.64rem;
 }
-.meet-item>.meet-btm>.name {
-    width: 4.38rem;
-    color: #5f5f5f;
-    overflow:hidden;
-    display:-webkit-box;
-    -webkit-box-orient:vertical;
-    -webkit-line-clamp:4;
-    text-overflow:ellipsis;
-    font-size: .2rem;
+.swiper-btm{
+    height: 1.64rem;
+    width: 60%;
 }
-.meet-item>.img-wrap>.des {
-    width: 100%;
+.swiper-item>.swiper-btm>.name {
     font-size: .32rem;
-    color:#8a898a;
-    overflow:hidden;
-    display:-webkit-box;
-   -webkit-box-orient:vertical;
-    -webkit-line-clamp:1;
-    text-overflow:ellipsis;
-}
-/* 殡葬新闻 */
-.news-wrap{
-    padding-bottom: 2rem;
-}
-.news-item{
-    height: 2.4rem;
-    padding: .23rem .46rem .37rem .21rem;
-    border-bottom: .17rem solid #f2f2f2;
-}
-.cont-title {
-    color: #1e1e1e;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    text-overflow: ellipsis;
-    font-size: .32rem;
-    width: 324px;
-}
-.cont-des {
-    color: #333333;
+    font-weight: 400;
+    color: #1a1a1a;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     text-overflow: ellipsis;
-    font-size:.23rem;
-    margin-top: .1rem;
+    font-family: Microsoft YaHei,Helvetica Neue,Helvetica,STHeiTi,Arial,sans-serif;
 }
+.swiper-item>.swiper-btm>.des {
+    font-size: .28rem;
+    overflow: hidden;
+    color:#8a898a;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+}
+/* 行业大会 */
+.meet-wrap {
+    padding-bottom: 1rem;
+    margin-top: .9rem;
+}
+
+.meet-item {
+    padding: .36rem .4rem .29rem .32rem;
+    border-bottom: .01rem solid #f2f2f2;
+}
+
+.meetimg4 {
+    width: 2.21rem;
+    height: 2.02rem;
+    border-radius: .05rem;
+}
+
+.meet-btm {
+    margin-top: .3rem;
+    width: 100%;
+}
+
+.meet-item>.meet-btm>.name {
+    width: 4.38rem;
+    color: #a8a8a8;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    text-overflow: ellipsis;
+    font-size: .28rem;
+}
+
+.meet-item>.img-wrap>.des {
+    width: 100%;
+    font-size: .32rem;
+    color: #1a1a1a;
+    font-weight: 400;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    font-family: Microsoft YaHei, Helvetica Neue, Helvetica, STHeiTi, Arial, sans-serif;
+}
+
+/* 殡葬新闻 */
+.news-wrap {
+    padding-bottom: 1rem;
+    margin-top: .9rem;
+}
+
+.news-item {
+    padding: .23rem 0rem;
+    margin: 0 .4rem;
+    border-bottom: .01rem solid #e4e4e4;
+}
+
+.cont-wrap {
+    width: 100%;
+}
+
+.cont-title {
+    font-size: .32rem;
+    color: #1a1a1a;
+    font-weight: 400;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    font-family: Microsoft YaHei, Helvetica Neue, Helvetica, STHeiTi, Arial, sans-serif;
+}
+
+.cont-des {
+    color: #a8a8a8;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    font-size: .28rem;
+    margin-top: .3rem;
+}
+
 .cont-time {
     text-align: right;
     color: #a8a8a8;
@@ -86,28 +138,44 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     text-overflow: ellipsis;
-    font-size:.22rem;
-    margin-top: .1rem;
+    font-size: .22rem;
+    margin-top: .15rem;
 }
+
 /* 传统文化 */
+.tra-wrap {
+    padding-bottom: 1rem;
+    margin-top: 1.2rem;
+}
+
 .culture-item {
     margin-top: .32rem;
-    margin-bottom: .27rem;
-    border-bottom: 1px solid #f2f2f2;
 }
-.culture-title{
-    color: #2d2d2d;
+
+.culture-title {
+    color: #1a1a1a;
     font-size: .32rem;
-    width: 7.16rem;
-    margin-bottom: .23rem;
+    padding: 0 .4rem;
+    width: 100%;
+    font-weight: 400;
+    margin-top: .26rem;
+    margin-bottom: .26rem;
+    font-weight: 400;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     text-overflow: ellipsis;
+    font-family: Microsoft YaHei, Helvetica Neue, Helvetica, STHeiTi, Arial, sans-serif;
 }
 
-.culture-img{
-    width: 7.16rem;
+.culture-img {
+    padding: 0 .4rem;
+    width: 100%;
     height: 3.59rem;
+}
+
+.bar {
+    height: 9.5rem;
+    display: none;
 }

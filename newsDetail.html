@@ -3,11 +3,15 @@
 
 <head>
   <meta charset="UTF-8" />
+  <title>孝子部落集团官网_殡葬教育_殡葬生态服务_电子讣告_风水盒</title>
+  <meta name="keywords" content="骨灰盒、寿衣、殡葬用品、电子讣告、讣告、殡葬教育、殡仪服务、在线祭祀、在线祭扫、云扫墓、云祭扫、云祭祀、清明祭祖、清明扫墓、殡葬文化、网上祭祀、网上扫墓、网上祭拜、祭祀服务、祭祀、墓园、一条龙、白事、丧葬服务">
+  <meta name="description" content="孝子部落集团定位新殡葬产业服务商，为殡葬企业一站式提能增效解决方案，为殡葬企业提供三大赋能服务：殡业培训教育、软件科
+  技服务、优品采购服务。专注为殡葬商家提供一站式提能增效解决方案，规范殡葬市场、提升服务品质、增加顾客数量、改善管理效率、提升企业业绩。">
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
   <meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <title>新闻详情</title>
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/newsDetail.css" />
+  <meta name="referrer" content="never"> 
 </head>
 
 <body>
@@ -15,16 +19,18 @@
     <div class="detail-wrap " id="title">
       <div class="detail-cont  col j-c ">
         <div class="detail-title">{{info.title}}</div>
-        <div class="detail-date">发布时间：{{info.updatetime}} <span style="margin-left: 20px;"
-            v-if="info.source">文章来源：{{info.source}}</span></div>
+        <div class="detail-date" v-if="info.updatetime">发布时间：{{info.updatetime}} </div>
         <div class="detail-list col j-c a-c">
           <div class="detail-content" v-html="info.contents">
           </div>
 
         </div>
+        <span class="sourse" v-if="info.source">文章来源：{{info.source}}</span>
       </div>
 
     </div>
+  </div>
+    <script src="js/rem.js"></script>
     <script src="js/jquery-1.8.2.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/title.js"></script>
@@ -34,6 +40,8 @@
     <script src="js/coment.js"></script>
     <script src="js/axios.min.js"></script>
     <script src="js/newsDetail.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <script src="js/share.js"></script>
     <script>
       $(".detail-btm-btm").click(function () {
         window.history.go(-1)

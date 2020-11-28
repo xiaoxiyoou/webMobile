@@ -20,7 +20,7 @@ var app = new Vue({
             cate: 10004
         },
         {
-            name: '传统文化',
+            name: '殡葬文化',
             limit: 50,
             cate: 10005
         },
@@ -53,6 +53,7 @@ var app = new Vue({
         },
         //   获取行业大会数据
         getlist(limit,cate,index) {
+            document.body.scrollTop = document.documentElement.scrollTop = 0
             var that = this;
             this.isActive = index
             axios.get('http://www.api.s.xiaozibl.com/api/news/getlist', {
@@ -70,12 +71,22 @@ var app = new Vue({
                         that.swiper = true
                         that.meet = false
                         that.news = false
+                        if (that.conferenceList.length < 2) {
+                            $(".bar").css("display", "block")
+                        } else {
+                            $(".bar").css("display", "none")
+                        }
                     } else if(cate == 10004){
                         that.funeralList = res.data.data.item
                         console.log('殡葬新闻', that.funeralList);
                         that.swiper = false
                         that.meet = true
                         that.news = false
+                        if (that.funeralList.length < 3) {
+                            $(".bar").css("display", "block")
+                        } else {
+                            $(".bar").css("display", "none")
+                        }
 
                     }else if(cate == 10005){
                         that.cultureList = res.data.data.item
@@ -83,6 +94,11 @@ var app = new Vue({
                         that.swiper = false
                         that.meet = false
                         that.news = true
+                        if (that.cultureList.length < 3) {
+                            $(".bar").css("display", "block")
+                        } else {
+                            $(".bar").css("display", "none")
+                        }
 
                     }
                 })
@@ -94,7 +110,7 @@ var app = new Vue({
 
     },
     mounted() {
-        this.getcate()
+        // this.getcate()
         this.getlist(10,10003,0)
         // this.getlist(3,10004,1)
         // this.getlist(4,10005,2)

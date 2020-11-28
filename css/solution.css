@@ -3,16 +3,17 @@
 }
 .solu-sbTitle{
     color: #888886;
-    font-size: .2rem;
+    font-size: .24rem;
     margin-top: .51rem;
 }
 .solu-title{
     color: #2c3d4e;
-    font-size: .28rem;
+    min-width: 3.65rem;
+    font-size: .32rem;
     margin-top: .07rem;
-    width: 3.65rem;
     height: .76rem;
     border: 1px solid #888886;
+    padding: 0 .2rem;
 }
 .solu-list{
     width: 100%;
@@ -28,15 +29,13 @@
 }
 .solu-des{
     color: #192548;
-    font-size: .23rem;
+    font-size: .28rem;
 }
 .mideg-title{
     color: #888886;
-    font-size: .2rem;
     margin-top: .67rem;
 }
 .mid-title{
     color: #2c3d4e;
-    font-size: .28rem;
     margin-bottom: .5rem;
 }

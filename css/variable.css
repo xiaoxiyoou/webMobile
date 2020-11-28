@@ -1,0 +1,41 @@
+.color-theme {
+    color: #333333;
+}
+
+.color-sub-them {
+    color: #2d2d2d;
+}
+
+.color-text {
+    color: #5f5f5f;
+}
+
+.color-background {
+    background-color: #f96e5b;
+}
+.font-size-small-e {
+    font-size: .24rem;
+}
+.font-size-small-s {
+    font-size: .24rem;
+}
+
+.font-size-small {
+    font-size: .26rem;
+}
+
+.font-size-medium {
+    font-size: .28rem;
+}
+
+.font-size-medium-x {
+    font-size: .30rem;
+}
+
+.font-size-large {
+    font-size: .32rem;
+}
+
+.font-size-large-x {
+    font-size: .36rem;
+}

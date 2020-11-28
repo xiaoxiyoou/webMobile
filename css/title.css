@@ -18,7 +18,9 @@
     width: .99rem;
 }
 .nav-more{
+    background: url(./../img/title/more.png) no-repeat top center / cover;
     width: .50rem;
+    height: .35rem;
 }
 .nav-close{
     position: absolute;

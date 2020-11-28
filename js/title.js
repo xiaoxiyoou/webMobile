@@ -1,13 +1,23 @@
 // 显示导航栏
-$(".nav-more").click(function(){
-    $(".nav-cont").css("display","block")
+$(".nav-more").click(function () {
+    $(".nav-cont").css("display", "block")
+    $(".nav-cont").addClass("slideInLeft")
+    $(".nav-cont").removeClass("slideOutLeft")
 })
 // 关闭导航栏
-$(".nav-mask").click(function(){
-    $(".nav-cont").css("display","none")
+$(".nav-mask").click(function () {
+    $(".nav-cont").addClass("slideOutLeft")
+    $(".nav-cont").removeClass("slideInLeft")
+    setTimeout(function () {
+        $(".nav-cont").css("display", "none")
+    }, 1000)
 })
-$(".nav-close").click(function(){
-    $(".nav-cont").css("display","none")
+$(".nav-close").click(function () {
+    $(".nav-cont").addClass("slideOutLeft")
+    $(".nav-cont").removeClass("slideInLeft")
+    setTimeout(function () {
+        $(".nav-cont").css("display", "none")
+    }, 1000)
 })
 
 $('.nav-list').click(function () {
@@ -27,5 +37,5 @@ $('.nav-list').click(function () {
     }
 })
 $(".nav-logo").click(function () {
-    window.location.href="./index.html"
-  });
+    window.location.href = "./index.html"
+});

@@ -18,19 +18,19 @@
     display: none;
 }
 .btn-wrap{
-    width: 3rem;
-    position: absolute;
+    /* width: 3rem; */
+    /* position: absolute; */
     right: 0;
     top: 3.25rem;
+    width: 100%;
+    margin-top: .26rem;
 }
 .btn{
-    width: .58rem;
-    height: .58rem;
-    margin-left: 0.1rem;
+    width: .75rem;
+    height: .85rem;
     margin-top: 0.1rem;
 }
 .btn-hover{
-    /* box-shadow: 1px 1px 5px #bea16c; */
     border:2px solid #bea16c;
 
 }
@@ -44,11 +44,11 @@
 #team{
     width: 100%;
     background-color: #ebebe9;
-    padding: .2rem 0 .5rem;
+    padding: .25rem 0 .7rem;
 }
 .swiper-slide{
     text-align: center;
 }
 .swiper-img{
-    width: 6.4rem;
+    width: 6.2rem;
 }

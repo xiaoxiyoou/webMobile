@@ -1,16 +1,19 @@
-.ser-wrap{
-}
-.ser-top{
+.ser-wrap {}
+
+.ser-top {
     padding: .5rem;
     background-color: #ebebe9;
     width: 100%;
 }
-.ser-top-list{
+
+.ser-top-list {
     width: 6.5rem;
     margin-top: .4rem;
 }
-.ser-top-item{
+
+.ser-top-item {
     width: 3.18rem;
+    /* width: 6.3rem; */
     height: 2.46rem;
     background-color: #bea16c;
     position: relative;
@@ -19,13 +22,17 @@
     padding: .2rem;
     margin-top: .17rem;
 }
-.ser-title{
+
+.ser-title {
     font-size: .3rem;
 }
-.ser-des{
-    font-size: .13rem;
+
+.ser-des {
+    font-size: .24rem;
+    margin-top: .1rem;
 }
-.ser-img{
+
+.ser-img {
     position: absolute;
     z-index: 1;
     bottom: 0;
@@ -33,40 +40,48 @@
     width: 1.26rem;
     height: 1.26rem;
 }
+
+
+
 /* 地图 */
-.map-wrap{
+.map-wrap {
     width: 100%;
     padding: .5rem .35rem;
     color: #c4a064;
 }
-.map-title{
+
+.map-title {
     width: 100%;
     font-weight: 700;
     font-size: .35rem;
     margin-bottom: .1rem;
 
 }
-.map-des{
+
+.map-des {
     width: 100%;
-    font-size: .27rem;
-}
-.map-img{
-    width: 6.85rem;
-}
-.map-tip{
     font-size: .28rem;
 }
 
-.map-btn{
+.map-img {
+    width: 6.85rem;
+}
+
+.map-tip {
+    font-size: .28rem;
+}
+
+.map-btn {
     width: 2.17rem;
     height: .57rem;
     border-radius: .29rem;
     border: 1px solid #bea16c;
     color: #c4a064;
-    font-size: .29rem;
+    font-size: .28rem;
     margin-top: .2rem;
 
 }
+
 /* 查询 */
 .container .content {
     background-color: #fff;
@@ -89,7 +104,7 @@
     color: #bea16c;
     font-size: .35rem;
     font-weight: 700;
-    margin-top: .40rem 
+    margin-top: .40rem
 }
 
 .container .content .item {
@@ -104,7 +119,7 @@
     border: .02rem solid #b2a189;
     margin-top: .33rem;
     padding-left: .20rem;
-    font-size: .25rem
+    font-size: .28rem
 }
 
 .container .content .item .receive {
@@ -128,9 +143,8 @@
 
 .container .content .item .tip {
     font-size: .25rem;
-    color:#bea16c;
+    color: #bea16c;
     margin-bottom: .30rem;
-    margin-top: .30rem
 }
 
 .container .content .item .textbtn {
@@ -140,5 +154,6 @@
     background-color: #bea16c;
     color: #fff;
     font-size: .30rem;
-    margin-top: .30rem
+    margin-top: .30rem;
+    margin-bottom: .30rem
 }

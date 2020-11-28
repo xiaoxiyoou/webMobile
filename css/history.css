@@ -13,13 +13,26 @@
 }
 
 .des {
-    padding: .20rem;
+    padding: 0 .20rem;
     background-color: #efefef;
     border-radius: .05rem;
     width: 2.89rem;
     line-height: .32rem;
     color: #666666;
-    font-size: .18rem;
+    font-size: .27rem;
+    text-align: justify;
+}
+
+.des1 {
+    padding-bottom: .2rem;
+}
+
+.des2 {
+    padding-top: .2rem;
+}
+
+.des3 {
+    padding: .2rem;
 }
 
 .triangle {
@@ -50,18 +63,29 @@
 }
 
 .history-img {
-    height: 31.17rem;
-    width: .21rem;
+    height: 35rem;
+    width: .37rem;
 }
 
 .spot {
-    width: .08rem;
-    height: .08rem;
+    width: .12rem;
+    height: .12rem;
     border-radius: 50%;
     background-color: #c4a064;
+    margin-bottom: .03rem;
+    display: inline-block;
+    margin-right: .1rem;
 }
-li{color:#c4a064}  /*点的颜色*/
-li span{color:#666666} 
-.itemBlock{
+
+li {
+    color: #c4a064
+}
+
+/*点的颜色*/
+li span {
+    color: #666666
+}
+
+.itemBlock {
     width: 2.89rem;
 }

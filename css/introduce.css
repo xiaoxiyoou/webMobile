@@ -3,9 +3,10 @@
 }
 .intro-text{
     color: #444444;
-    font-size: .25rem;
+    font-size: .28rem;
     line-height: .48rem;
-    text-indent: .46rem;
+    text-align: justify;
+    text-indent: .56rem;
 }
 .intro-img{
     width: 100%;
@@ -13,15 +14,19 @@
 }
 .intro-text_2{
     color: #444444;
-    font-size: .25rem;
+    font-size: .28rem;
     line-height: .48rem;
     width: 100%;
+    text-align: justify;
+    text-indent: .56rem;
 }
 .intro-text>span{
     font-size: .3rem;
 }
 .intro-text_3{
     color: #444444;
+    text-indent: .56rem;
+    text-align: justify;
     font-size: .28rem;
     width: 100%;
     margin-top: .2rem;
